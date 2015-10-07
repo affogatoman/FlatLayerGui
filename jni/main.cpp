@@ -68,7 +68,6 @@ int create_gamemode_hook(CreateWorldScreen* thiz) {
 JNIEXPORT jint JNI_OnLoad(JavaVM* vm, void* reserved) {
     mcpelauncher_hook((void*) &CreateWorldScreen::buttonClicked, (void*) &create_button_hook,   (void**) &create_button);
     mcpelauncher_hook((void*) &CreateWorldScreen::_getGameMode,  (void*) &create_gamemode_hook, (void**) &create_gamemode);
-    mcpelauncher_hook((void*) &CreateWorldScreen::render,        (void*) &create_render_hook,   (void**) &create_render);
     
     return JNI_VERSION_1_2;
 }
